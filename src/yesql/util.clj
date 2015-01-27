@@ -29,6 +29,8 @@
   (or (some-> path
               io/resource
               slurp)
+      (some-> path
+              slurp)
       (throw (FileNotFoundException. path))))
 
 ;;; TODO There may well be a built-in for this. If there is, I have not found it.
